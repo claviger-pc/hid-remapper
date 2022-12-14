@@ -10,15 +10,4 @@ config BOARD_ENABLE_DCDC
 	depends on BOARD_SEEED_XIAO_NRF52840
 
 
-config HID_USB_LOGGING
-        bool "Enable USB CDC ACM logging to help debug"
-        select LOG
-        select USB
-        select USB_DEVICE_STACK
-        select USB_CDC_ACM
-        select SERIAL
-        select CONSOLE
-        select UART_INTERRUPT_DRIVEN
-        select UART_LINE_CTRL
-        select UART_CONSOLE
-        select USB_UART_CONSOLE
+
