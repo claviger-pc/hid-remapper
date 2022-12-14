@@ -8,3 +8,16 @@ config BOARD_ENABLE_DCDC
 	select SOC_DCDC_NRF52X
 	default y
 	depends on BOARD_ADAFRUIT_FEATHER_NRF52840
+
+config HID_USB_LOGGING
+        bool "Enable USB CDC ACM logging to help debug"
+        select LOG
+        select USB
+        select USB_DEVICE_STACK
+        select USB_CDC_ACM
+        select SERIAL
+        select CONSOLE
+        select UART_INTERRUPT_DRIVEN
+        select UART_LINE_CTRL
+        select UART_CONSOLE
+        select USB_UART_CONSOLE
